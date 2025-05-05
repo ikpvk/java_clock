@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.TimeZone;
 
 public class ClockFrame extends JFrame {
 
@@ -23,6 +24,7 @@ public class ClockFrame extends JFrame {
         this.setResizable(Boolean.FALSE);
 
         timeFormat = new SimpleDateFormat("hh:mm:ss a");
+        timeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         dayFormat = new SimpleDateFormat("E d MMM y");
 
         timeLabel = new JLabel();
